@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Digger_Game" beforeDir="false" afterPath="$PROJECT_DIR$/Digger_Game" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1srdRmmNoJsChwW0fBIii3tN6Jv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RFP_Python/rtfp-game-group02/game_sprites/character/main_character.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jorda\Digger_Game\game_sprites\gems\gem_types" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jorda\Digger_Game\game_sprites\gems" />
+      <recent name="C:\Users\jorda\Digger_Game\levels\definition\" />
+      <recent name="C:\Users\jorda\Digger_Game\levels\definition" />
+      <recent name="C:\Users\jorda\PycharmProjects\Digger_Game\game_sprites\powerup\powerup_def" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="rtfp-game-group02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="rtfp-game-group02" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\jorda\PycharmProjects\Digger_Game\venv\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.game" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="" />
+      <created>1621634640523</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1621634640523</updated>
+      <workItem from="1621634644525" duration="922000" />
+      <workItem from="1621824516252" duration="2893000" />
+      <workItem from="1621890732833" duration="1516000" />
+      <workItem from="1621986094875" duration="7493000" />
+      <workItem from="1622478024949" duration="8184000" />
+      <workItem from="1622496262270" duration="3532000" />
+      <workItem from="1623774013877" duration="2534000" />
+      <workItem from="1624395758463" duration="360000" />
+      <workItem from="1624407810017" duration="4493000" />
+      <workItem from="1624650121388" duration="3121000" />
+      <workItem from="1624932450054" duration="1382000" />
+      <workItem from="1625258798404" duration="6597000" />
+      <workItem from="1625802672329" duration="1720000" />
+      <workItem from="1625842597337" duration="19915000" />
+      <workItem from="1625877678349" duration="1000000" />
+      <workItem from="1625879175235" duration="827000" />
+      <workItem from="1625881213094" duration="7083000" />
+      <workItem from="1625890538145" duration="10302000" />
+      <workItem from="1626786996031" duration="1265000" />
+      <workItem from="1627343841185" duration="988000" />
+      <workItem from="1627596034940" duration="1670000" />
+      <workItem from="1627597893231" duration="11202000" />
+      <workItem from="1627848055436" duration="3748000" />
+      <workItem from="1627852043886" duration="314000" />
+      <workItem from="1627852490808" duration="33000" />
+      <workItem from="1627852598162" duration="487000" />
+      <workItem from="1627853168947" duration="127000" />
+      <workItem from="1627853364777" duration="4000" />
+      <workItem from="1627853647661" duration="14000" />
+      <workItem from="1627865435935" duration="1369000" />
+      <workItem from="1627915349225" duration="4668000" />
+      <workItem from="1627920107193" duration="7457000" />
+      <workItem from="1627939311381" duration="2400000" />
+      <workItem from="1627953942018" duration="54000" />
+      <workItem from="1627960406628" duration="5376000" />
+      <workItem from="1627966436649" duration="877000" />
+    </task>
+    <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
+      <created>1625868988804</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625868988804</updated>
+    </task>
+    <task id="LOCAL-00002" summary="path function working, setting up rest of components, game grid for enemy movement set up and functional. enemy movement programming to be started shortly">
+      <created>1627851090839</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627851090839</updated>
+    </task>
+    <task id="LOCAL-00003" summary="path function working, setting up rest of components, game grid for enemy movement set up and semi-functional. enemy movement programming to be started shortly">
+      <created>1627851170628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627851170628</updated>
+    </task>
+    <task id="LOCAL-00004" summary="path function working, setting up rest of components, game grid for enemy movement set up and semi-functional. enemy movement programming to be started shortly">
+      <created>1627851584515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1627851584515</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Digger_Game" />
+    </ignored-roots>
+    <MESSAGE value="path function working, setting up rest of components, will hopefully neaten and comment code soon" />
+    <MESSAGE value="path function working, setting up rest of components, game grid for enemy movement set up and functional. enemy movement programming to be started shortly" />
+    <MESSAGE value="path function working, setting up rest of components, game grid for enemy movement set up and semi-functional. enemy movement programming to be started shortly" />
+    <MESSAGE value="Added some images, gems and scoreboard and info bars" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some images, gems and scoreboard and info bars" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1627967310110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="slackPresenceActive">
+    <option name="active" value="false" />
+  </component>
+</project>
