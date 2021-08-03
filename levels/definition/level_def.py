@@ -58,13 +58,13 @@ class Level( object ):
         self.path_list.add( npath )
         self.sprite_list.add( npath )
 
-    def gem_create(self, nums):
+    def rand_create(self, nums):
         xvals = random.sample(range(25, 925), nums)
         yvals = random.sample( range( 150, 550 ), nums )
-        glist = []
+        slist = []
         for i in range(nums):
-            glist.append([xvals[i], yvals[i]])
-        return glist
+            slist.append([xvals[i], yvals[i]])
+        return slist
 
 
 

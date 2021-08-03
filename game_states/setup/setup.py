@@ -13,6 +13,7 @@ from game_sprites.timer.timerbackground import *
 from game_sprites.gems.gem_def.gems_def import *
 from game_sprites.foreground.foreground import *
 
+
 def setup():
     """ This function sets up the game """
     path = Path()
@@ -25,7 +26,7 @@ def setup():
     timer = Timer()
     foreground = Foreground()
 
-    level_list = [Level_0( player, ground, path_maker, path, background, enemy)]
+    level_list = [Level_0( player, ground, path_maker, path, background, enemy )]
 
     # Set the current level
     current_level_no = 0
@@ -80,14 +81,13 @@ def setup():
     ground.rect.bottom = 625
     path_maker.rect.centerx = player.rect.centerx
     path_maker.rect.centery = player.rect.centery
-    ngem = current_level.gem_create( current_level.jewel_num )
+    ngem = current_level.rand_create( current_level.jewel_num )
     for i in ngem:
         g = Gems_Def()
         g.rect.x = i[0]
         g.rect.y = i[1]
         current_level.gems_list.add( g )
         current_level.sprite_list.add( g )
-
 
     # Run until the user asks to quit
     running = False
@@ -96,3 +96,13 @@ def setup():
 
     return foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
            sprites, game_state
+
+"""
+    nbomb = current_level.rand_create( current_level.jewel_num )
+    for i in nbomb:
+        b = Bomb()
+        b.rect.x = i[0]
+        b.rect.y = i[1]
+        current_level.gems_list.add( b )
+        current_level.sprite_list.add( b )
+    """

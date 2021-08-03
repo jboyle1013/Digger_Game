@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Digger_Game" beforeDir="false" afterPath="$PROJECT_DIR$/Digger_Game" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/setup/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/levels/definition/level_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/definition/level_def.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +162,9 @@
       <workItem from="1627953942018" duration="54000" />
       <workItem from="1627960406628" duration="5376000" />
       <workItem from="1627966436649" duration="877000" />
+      <workItem from="1627967705089" duration="718000" />
+      <workItem from="1627997232000" duration="1276000" />
+      <workItem from="1627999478636" duration="144000" />
     </task>
     <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
       <created>1625868988804</created>
@@ -187,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627851584515</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added some images, gems and scoreboard and info bars">
+      <created>1627967824723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1627967824723</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +248,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1627967310110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1627999542614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="slackPresenceActive">
