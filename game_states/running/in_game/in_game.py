@@ -1,10 +1,11 @@
 import pygame
 
 
-def in_game(foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list,
+def in_game(foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running,
+            clock, timer, current_level, current_level_no, level_list,
             sprites, game_state):
     running = True
-    pygame.sprite.LayeredUpdates.change_layer(sprites, ground, 2)
+    pygame.sprite.LayeredUpdates.change_layer( sprites, ground, 2 )
 
-    return foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, \
-        level_list, sprites, game_state
+    return foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, \
+           level_list, sprites, game_state

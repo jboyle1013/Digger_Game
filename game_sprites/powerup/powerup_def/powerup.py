@@ -1,8 +1,9 @@
 import pygame
-from game_vals.game_vals import *
+
+from levels.definition.level_def import Level
 
 
-class PowerUp(pygame.sprite.Sprite):
+class PowerUp( pygame.sprite.Sprite ):
 
     def __init__(self):
         super().__init__()
@@ -18,7 +19,4 @@ class PowerUp(pygame.sprite.Sprite):
         self.active = False
         self.collect_time = 0
         self.curr_time = 0
-
-
-
-
+        self.level = Level( object, object, object, object, object, object )

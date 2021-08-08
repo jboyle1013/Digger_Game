@@ -1,17 +1,17 @@
-import pygame
-
 from game_sprites.background.background import Background
 # Initialize arrow keys, space bar, and escape key
 from game_sprites.character.main_character import Player
-from game_sprites.ground.ground import Ground
-from game_sprites.path.path_maker import Path_Maker
-from levels.game_levels.level0 import Level_0
-from game_sprites.path.path import *
 from game_sprites.enemies.enemy_def.enemy_def import Enemy
-from game_sprites.timer.timer import *
-from game_sprites.timer.timerbackground import *
-from game_sprites.gems.gem_def.gems_def import *
 from game_sprites.foreground.foreground import *
+from game_sprites.gems.gem_def.gems_def import *
+from game_sprites.ground.ground import Ground
+from game_sprites.path.path import *
+from game_sprites.path.path_maker import Path_Maker
+from game_sprites.powerdown.powerdown import *
+from game_sprites.powerup.powerup_types.bombs import *
+from game_sprites.timer.timerbackground import *
+from levels.game_levels.level0 import Level_0
+from scoring.scoring import *
 
 
 def setup():
@@ -25,7 +25,10 @@ def setup():
     timerback = TimerBackground()
     timer = Timer()
     foreground = Foreground()
-
+    scoring = Score()
+    powerup = PowerUp()
+    powerdown = PowerDown
+    bomb = None
     level_list = [Level_0( player, ground, path_maker, path, background, enemy )]
 
     # Set the current level
@@ -89,12 +92,14 @@ def setup():
         current_level.gems_list.add( g )
         current_level.sprite_list.add( g )
 
+    nbomb = current_level.rand_create( current_level.jewel_num )
+
     # Run until the user asks to quit
     running = False
     clock = pygame.time.Clock()
     game_state = "in_game"
 
-    return foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
+    return foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
            sprites, game_state
 
 """

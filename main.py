@@ -20,7 +20,7 @@ def main():
     pygame.init()
     game_state = "setup"
 
-    foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
+    foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
     sprites, game_state = game_states.statechanger.statechanger.statechanger( game_state )
 
     pygame.time.set_timer( pygame.USEREVENT, 1000 )
@@ -69,8 +69,8 @@ def main():
         # Update items in the level
 
         current_level.update()
-        foreground, screen, player, ground, path_maker, background, running, clock, timer, current_level, \
-            current_level_no, level_list, sprites, game_state = game_states.statechanger.statechanger.statechanger(
+        foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, \
+        current_level_no, level_list, sprites, game_state = game_states.statechanger.statechanger.statechanger(
             game_state )
 
         # If the player gets to the end of the level, go to the next level
@@ -104,7 +104,7 @@ def main():
                     endScreen = False
 
         pygame.display.flip()
-        clock.tick( 60 )
+        clock.tick( 30 )
     # Done! Time to quit.
     pygame.quit()
 
