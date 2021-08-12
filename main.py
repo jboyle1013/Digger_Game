@@ -20,10 +20,11 @@ def main():
     pygame.init()
     game_state = "setup"
 
-    foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, current_level_no, level_list, \
-    sprites, game_state = game_states.statechanger.statechanger.statechanger( game_state )
+    foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, \
+    running, clock, timer, current_level, current_level_no, level_list, sprites, game_state \
+        = game_states.statechanger.statechanger.statechanger(game_state)
 
-    pygame.time.set_timer( pygame.USEREVENT, 1000 )
+    pygame.time.set_timer(pygame.USEREVENT, 1000)
     while running:
         # iterate over the list of Event objects
         # that was returned by pygame.event.get() method.
@@ -45,9 +46,9 @@ def main():
                     pygame.quit()
                 # Controls motion to left
                 if player.pathmaker == True and player.belowground == True:
-                    player_movement( event, player, path_maker )
+                    player_movement(event, player, path_maker)
                 elif not player.belowground:
-                    player_movement( event, player, path_maker )
+                    player_movement(event, player, path_maker)
 
             # stops main character when key is released
             if event.type == pygame.KEYUP:
@@ -69,9 +70,9 @@ def main():
         # Update items in the level
 
         current_level.update()
-        foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, background, running, clock, timer, current_level, \
-        current_level_no, level_list, sprites, game_state = game_states.statechanger.statechanger.statechanger(
-            game_state )
+        foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, \
+        background, running, clock, timer, current_level, current_level_no, level_list, \
+        sprites, game_state = game_states.statechanger.statechanger.statechanger(game_state)
 
         # If the player gets to the end of the level, go to the next level
         # There is only one level that has been created.
@@ -80,7 +81,7 @@ def main():
 
         # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT
         # Draw background and sprites
-        current_level.draw( screen )
+        current_level.draw(screen)
 
         # TODO
         # A time controlled scroll would most likely either be here or in the
@@ -89,12 +90,11 @@ def main():
         pygame.display.flip()
 
         # Ensure program maintains a rate of 30 frames per second
-        clock.tick( 30 )
+        clock.tick(30)
 
     clock = pygame.time.Clock()
     endScreen = True
 
-    color = pygame.Color( 'WHITE' )
     while endScreen:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -104,7 +104,7 @@ def main():
                     endScreen = False
 
         pygame.display.flip()
-        clock.tick( 30 )
+        clock.tick(30)
     # Done! Time to quit.
     pygame.quit()
 

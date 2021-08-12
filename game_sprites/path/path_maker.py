@@ -1,5 +1,5 @@
-from levels.definition.level_def import *
 from game_vals.game_vals import *
+from levels.definition.level_def import *
 
 
 class Path_Maker( pygame.sprite.Sprite ):
@@ -12,14 +12,17 @@ class Path_Maker( pygame.sprite.Sprite ):
         self._layer = 1
         self.width = 50
         self.height = 50
-        self.image = pygame.Surface( [self.width, self.height] )
-        self.image.fill( PATH_COLOR )
+        self.image = pygame.Surface([self.width, self.height])
+        self.image.fill(PATH_COLOR)
         # Set a reference to the image rect.
         self.rect = self.image.get_rect()
         self.change_x = 0
         self.change_y = 0
-        self.level = Level( object, object, object, object, object, object )
-
+        self.level = Level(object, object, object, object, object, object)
+        self.previous_Direction = None
+        self.p_vh = None
+        self.c_vh = None
+        self.current_Direction = None
         # Background image
         self.background = None
         self.path_coords = []
@@ -81,4 +84,3 @@ class Path_Maker( pygame.sprite.Sprite ):
     def cell_drawer(self):
         x = self.rect.centerx
         y = self.rect.centery
-        path_hit_list = pygame.sprite.spritecollide( self, self.level.path_list, False )
