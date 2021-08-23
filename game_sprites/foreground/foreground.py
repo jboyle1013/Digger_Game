@@ -1,7 +1,8 @@
 import pygame
 import pygame.gfxdraw
-from levels.definition.level_def import Level
+
 from game_vals.game_vals import *
+from levels.definition.level_def import Level
 
 foreground = pygame.Surface( (1000, 625), pygame.SRCALPHA, )
 pygame.gfxdraw.box( foreground, pygame.Rect( 0, 580, 1000, 55 ), TASK_BROWN )
@@ -25,7 +26,7 @@ class Foreground( pygame.sprite.Sprite ):
         height = 10000
         self.image = foreground
         self.rect = self.image.get_rect()
-        self.level = Level( object, object, object, object, object, object )
+        self.level = Level( object, object, object, object, object, object, object, object )
         self.font = pygame.font.SysFont( 'Comic Sans MS', 20 )
         self.score = 0
         self.bomb = pygame.image.load("game_sprites/powerup/powerup_types/bomb.png")
@@ -54,3 +55,19 @@ class Foreground( pygame.sprite.Sprite ):
 
         self.Lnumtext = self.font.render( str( 3 ), 1, WHITE )
         self.image.blit( self.Lnumtext, [955, 590] )
+
+    def update_scoreboard(self, score):
+        pygame.gfxdraw.filled_ellipse( foreground, 950, 20, 50, 35, WHITE )
+        self.score = score
+        self.scoretext = self.font.render( str( self.score ), 1, BLACK )
+        self.image.blit( self.scoretext, [940, 10] )
+
+    def update_bomb_num(self, bomb_num):
+        pygame.gfxdraw.box( foreground, pygame.Rect( 122, 580, 55, 55 ), TASK_BROWN )
+        self.bnumtext = self.font.render( str( bomb_num ), 1, WHITE )
+        self.image.blit( self.bnumtext, [125, 590] )
+
+    def update_life_num(self, life_num):
+        pygame.gfxdraw.box( foreground, pygame.Rect( 952, 580, 55, 55 ), TASK_BROWN )
+        self.lnumtext = self.font.render( str( life_num ), 1, WHITE )
+        self.image.blit( self.bnumtext, [955, 590] )

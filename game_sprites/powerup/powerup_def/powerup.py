@@ -19,4 +19,4 @@ class PowerUp( pygame.sprite.Sprite ):
         self.active = False
         self.collect_time = 0
         self.curr_time = 0
-        self.level = Level( object, object, object, object, object, object )
+        self.level = Level( object, object, object, object, object, object, object, object )

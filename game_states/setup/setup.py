@@ -29,7 +29,7 @@ def setup():
     powerup = PowerUp()
     powerdown = PowerDown
     bomb = None
-    level_list = [Level_0( player, ground, path_maker, path, background, enemy )]
+    level_list = [Level_0( player, ground, path_maker, path, background, enemy, scoring, foreground )]
 
     # Set the current level
     current_level_no = 0

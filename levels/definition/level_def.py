@@ -1,8 +1,10 @@
 # Level Class
 
-from game_sprites.path.path import *
-import numpy as np
 import random
+
+import numpy as np
+
+from game_sprites.path.path import *
 
 
 class Level( object ):
@@ -10,7 +12,7 @@ class Level( object ):
         Create a child class for each level with level-specific
         info. """
 
-    def __init__(self, player, ground, pathmaker, path, background, enemy):
+    def __init__(self, player, ground, pathmaker, path, background, enemy, score, foreground):
         """ Constructor. Pass in a handle to player. Needed for when moving platforms
             collide with the player.
             :param enemy: """
@@ -21,7 +23,9 @@ class Level( object ):
         self.sprite_list = pygame.sprite.Group()  # all game sprites
         self.path_maker = pathmaker  # the pathmaker class
         self.player = player  # the player class
+        self.foreground = foreground  # the foreground screen
         self.path = path  # the path class
+        self.score = score  # the scoring system, also a class
         self.ground = ground  # the ground class
         self.game_grid = []  # the grid, direction system for the enemies
         self.background = background  # the background class
@@ -30,6 +34,7 @@ class Level( object ):
         self.screen = pygame.display.set_mode( self.size )  # the screen
         # Background image
         self.base_font = pygame.font.Font( None, 32 )  # game font
+        self.bomb_num = 3  # number of bombs available to player
 
     # Update everything on this level
     def update(self):
@@ -100,6 +105,20 @@ class Level( object ):
             y = coords[1]
             if self.game_grid[(y, x)] != 1:
                 self.game_grid[(y, x)] = 1
+
+    def bomb_to_grid(self, coords):
+        """ Adds bomb space to grid, use top left x and y coords. """
+        x = coords[0]
+        y = coords[1]
+        for i in range( 100 ):
+            a = i + 1
+            if self.game_grid[y + a, x] != 1:
+                self.game_grid[y + a, x] = 1
+            if self.game_grid[y, x + a] != 1:
+                self.game_grid[y, x + a] = 1
+            if self.game_grid[y + a, x + a] != 1:
+                self.game_grid[y + a, x + a] = 1
+
 
 
 

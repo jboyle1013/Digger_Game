@@ -1,5 +1,6 @@
 import pygame
 import pygame.gfxdraw
+
 from game_vals.game_vals import *
 from levels.definition.level_def import Level
 
@@ -41,7 +42,7 @@ class Timer( pygame.sprite.Sprite ):
         self.image = clock_img
 
         self.rect = self.image.get_rect( center=(55, 55) )
-        self.level = Level( object, object, object, object, object, object )
+        self.level = Level( object, object, object, object, object, object, object, object )
         self.font = pygame.font.SysFont( 'Comic Sans MS', 20 )
         self.counter = 60
         self.text = self.font.render( str( self.counter ), 1, BLACK )

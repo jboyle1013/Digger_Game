@@ -2,7 +2,6 @@ import pygame
 
 from game_vals.game_vals import *
 from levels.definition.level_def import Level
-from game_sprites.enemies.enemy_def.npc_movement import *
 
 
 class Enemy( pygame.sprite.Sprite ):
@@ -32,7 +31,7 @@ class Enemy( pygame.sprite.Sprite ):
         self.rect.center = [1000, 750]
         self.direction_list = []
         # List of sprites we can bump against
-        self.level = Level( object, object, object, object, object, object )
+        self.level = Level( object, object, object, object, object, object, object, object )
 
     def update(self):
         """ Move the mob. """

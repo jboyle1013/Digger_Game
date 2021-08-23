@@ -1,5 +1,10 @@
+import pygame.gfxdraw
+import pygame.time
+
 from game_sprites.powerup.powerup_def.powerup import *
 from game_sprites.timer.timer import *
+
+bomb = pygame.Surface( (35, 35), pygame.SRCALPHA, )
 
 
 class Bomb( PowerUp ):
@@ -10,9 +15,6 @@ class Bomb( PowerUp ):
         self.image = pygame.transform.smoothscale( self.image, (35, 35) )
         self.rect = self.image.get_rect()
 
-    def bomb_plant(self, coords, timer):
-        b = Bomb()
-        b.rect.x = coords[0]
-        b.rect.y = coords[1]
-        self.level.sprite_list.add( b )
-        self.level.u
+    def explode(self):
+        self.image = bomb
+        pygame.gfxdraw.box( bomb, pygame.Rect( self.rect.left, self.rect.top, 35, 35 ), PATH_COLOR )

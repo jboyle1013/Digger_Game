@@ -1,19 +1,18 @@
-from levels.definition.level_def import Level
+import pygame
+
 from game_sprites.enemies.enemy_types.gobbler import Gobbler
 from game_sprites.gems.gem_def.gems_def import *
-import pygame
 
 
 # Create platforms for the level
 class Level_0( Level ):
     """ Definition for level 0. """
 
-    def __init__(self, player, ground, path_maker, path, background, enemy):
+    def __init__(self, player, ground, path_maker, path, background, enemy, score, foreground):
         """ Create level 0. """
 
         # Call the parent constructor
-        Level.__init__( self, player, ground, path_maker, path, background, enemy)
-
+        Level.__init__( self, player, ground, path_maker, path, background, enemy, score, foreground )
 
         self.jewel_num = 5
         self.enemy_num = 6

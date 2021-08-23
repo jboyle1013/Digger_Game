@@ -36,9 +36,12 @@ class Player( pygame.sprite.Sprite ):
         self.lives = 3
 
         # List of sprites we can bump against
-        self.level = Level( object, object, object, object, object, object)
+        self.level = Level( object, object, object, object, object, object, object, object )
 
     def update(self):
+
+        """ Check if character hit a gem. """
+        self.gem_score()
         """ Move the player. """
         # Move left/right
         self.rect.x += self.change_x
@@ -52,6 +55,7 @@ class Player( pygame.sprite.Sprite ):
         if self.belowground and [self.rect.x, self.rect.y] not in self.path.path_coords:
             self.path.path_coords.append( [self.rect.centerx, self.rect.centery] )
             self.path.all_path_coords.append( [self.rect.centerx, self.rect.centery] )
+            self.path.path_edge_coords.pop( [self.rect.centerx, self.rect.centery] )
 
             for a in range( 9 ):
                 x = a + 1
@@ -74,10 +78,22 @@ class Player( pygame.sprite.Sprite ):
                     if ([nx, self.rect.centery] not in self.path.path_coords) \
                             or ([nx, self.rect.centery] not in self.path.all_path_coords):
                         self.path.all_path_coords.append( [nx, self.rect.centery] )
+                        self.path.path_edge_coords.pop( [nx, self.rect.centery] )
 
                     if [nx, self.rect.centery] not in self.path.path_coords \
                             or ([px, self.rect.centery] not in self.path.all_path_coords):
                         self.path.all_path_coords.append( [px, self.rect.centery] )
+                        self.path.path_edge_coords.pop( [nx, self.rect.centery] )
+
+                    if ([nlex, self.rect.top] not in self.path.path_coords) \
+                            or ([nlex, self.rect.top] not in self.path.all_path_coords) \
+                            or ([nlex, self.rect.top] not in self.path.path_edge_coords):
+                        self.path.path_edge_coords.append( [nlex, self.rect.top] )
+
+                    if ([nlex, self.rect.bottom] not in self.path.path_coords) \
+                            or ([nlex, self.rect.bottom] not in self.path.all_path_coords) \
+                            or ([nlex, self.rect.bottom] not in self.path.path_edge_coords):
+                        self.path.path_edge_coords.append( [nlex, self.rect.bottom] )
 
                 if self.change_y != 0:
 
@@ -88,6 +104,16 @@ class Player( pygame.sprite.Sprite ):
                     if [self.rect.centerx, py] not in self.path.path_coords \
                             or ([self.rect.centerx, py] not in self.path.all_path_coords):
                         self.path.all_path_coords.append( [self.rect.centerx, py] )
+
+                    if ([nlex, self.rect.top] not in self.path.path_coords) \
+                            or ([nlex, self.rect.top] not in self.path.all_path_coords) \
+                            or ([nlex, self.rect.top] not in self.path.path_edge_coords):
+                        self.path.path_edge_coords.append( [nlex, self.rect.top] )
+
+                    if ([nlex, self.rect.bottom] not in self.path.path_coords) \
+                            or ([nlex, self.rect.bottom] not in self.path.all_path_coords) \
+                            or ([nlex, self.rect.bottom] not in self.path.path_edge_coords):
+                        self.path.path_edge_coords.append( [nlex, self.rect.bottom] )
 
             self.level.path_gen()
 
@@ -150,5 +176,6 @@ class Player( pygame.sprite.Sprite ):
 
     def gem_score(self):
         gem_hit_list = pygame.sprite.spritecollide( self, self.level.gems_list, True )
-        for gem in gem_hit_list:
-            pass
+        if len( gem_hit_list ) > 0:
+            score = self.level.score.scoreupdate()
+            self.level.foreground.update_scoreboard( score )
