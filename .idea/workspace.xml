@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="Added some images, gems and scoreboard and info bars">
-      <change afterPath="$PROJECT_DIR$/game_sprites/foreground/bombcounter/bombcounter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/digger-game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/digger-game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="updating path setup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/character/main_character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/main_character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/path/path.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/path/path_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path_maker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levels/definition/level_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/definition/level_def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +217,7 @@
       <workItem from="1628819601340" duration="1618000" />
       <workItem from="1629741238492" duration="4129000" />
       <workItem from="1629737024027" duration="4757000" />
-      <workItem from="1629902659302" duration="346000" />
+      <workItem from="1629902659302" duration="7128000" />
     </task>
     <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
       <created>1625868988804</created>
@@ -268,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627999835655</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updating path setup">
+      <created>1629903026107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1629903026107</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +299,8 @@
     <MESSAGE value="path function working, setting up rest of components, game grid for enemy movement set up and functional. enemy movement programming to be started shortly" />
     <MESSAGE value="path function working, setting up rest of components, game grid for enemy movement set up and semi-functional. enemy movement programming to be started shortly" />
     <MESSAGE value="Added some images, gems and scoreboard and info bars" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some images, gems and scoreboard and info bars" />
+    <MESSAGE value="updating path setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating path setup" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -315,7 +316,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1629902852001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1629912042426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digger_Game$activate_this.coverage" NAME="activate_this Coverage Results" MODIFIED="1629742283122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Scripts" />
     <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

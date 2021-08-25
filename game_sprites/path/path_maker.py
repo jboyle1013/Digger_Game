@@ -29,6 +29,12 @@ class Path_Maker( pygame.sprite.Sprite ):
         self.path_edge_coords = []
         self.path_mid_coords = []
         self.path_mid_border_coords = []
+        self.mpath_coords = []
+        self.mall_path_coords = []
+        self.mpath_edge_coords = []
+        self.mpath_mid_coords = []
+        self.mpath_mid_border_coords = []
+        self.uall_path_coords = []
 
     def update(self):
         """ Move the path. """

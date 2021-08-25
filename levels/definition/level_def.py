@@ -95,27 +95,36 @@ class Level( object ):
         game_gridsky = np.zeros( (105, 1000) )
         t = np.concatenate( (game_gridsky, game_gridglevel) )
         gg = np.zeros( (519, 1000) )
-        self.game_grid = np.concatenate( (t, gg) )
+        self.game_grid = np.concatenate((t, gg))
 
     def gridupdate(self):
         """ Updates game grid """
 
-        for coords in self.path_maker.all_path_coords:
+        for coords in self.path_maker.uall_path_coords:
             x = coords[0]
             y = coords[1]
+            val = coords[2]
             if self.game_grid[(y, x)] != 1:
-                self.game_grid[(y, x)] = 1
-        for coords in self.path_maker.path_edge_coords:
-            x = coords[0]
-            y = coords[1]
-            if self.game_grid[(y, x)] != 1:
-                self.game_grid[(y, x)] = 3
+                self.game_grid[(y, x)] = val
+
+            self.path_maker.uall_path_coords.remove(coords)
+            if val == 1:
+                self.path_maker.mall_path_coords.append(coords)
+
+            if val == 2:
+                self.path_maker.mpath_mid_coords.append(coords)
+
+            if val == 3:
+                self.path_maker.mpath_mid_border_coords.append(coords)
+
+            if val == 4:
+                self.path_maker.mpath_edge_coords.append(coords)
 
     def bomb_to_grid(self, coords):
         """ Adds bomb space to grid, use top left x and y coords. """
         x = coords[0]
         y = coords[1]
-        for i in range( 100 ):
+        for i in range(100):
             a = i + 1
             if self.game_grid[y + a, x] != 1:
                 self.game_grid[y + a, x] = 1
