@@ -43,6 +43,7 @@ class Level( object ):
         self.path_list.update()
         self.sprite_list.update()
         self.gridupdate()
+        self.player.pathmake()
 
     def draw(self, screen):
         """ Draw everything on this level. """
@@ -104,15 +105,31 @@ class Level( object ):
             x = coords[0]
             y = coords[1]
             val = coords[2]
-            if self.game_grid[(y, x)] != 1:
+            if self.game_grid[(y, x)] == 0:
+                if val == 1:
+                    self.path_maker.all_path_coords.append( coords )
+
+                if val == 2:
+                    self.path_maker.path_mid_coords.append( coords )
+
+                if val == 3:
+                    self.path_maker.path_mid_border_coords.append( coords )
+
+                if val == 4:
+                    self.path_maker.path_edge_coords.append( coords )
+
+            elif self.game_grid[(y, x)] != 0:
+                pass
+
+            if self.game_grid[(y, x)] != 1 and x > 105:
                 self.game_grid[(y, x)] = val
 
-            self.path_maker.uall_path_coords.remove(coords)
+            self.path_maker.uall_path_coords.remove( coords )
             if val == 1:
-                self.path_maker.mall_path_coords.append(coords)
+                self.path_maker.mall_path_coords.append( coords )
 
             if val == 2:
-                self.path_maker.mpath_mid_coords.append(coords)
+                self.path_maker.mpath_mid_coords.append( coords )
 
             if val == 3:
                 self.path_maker.mpath_mid_border_coords.append(coords)
