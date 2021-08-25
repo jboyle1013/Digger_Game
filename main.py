@@ -2,9 +2,11 @@
 # This program creates a blank screen,
 # starts the clock, and sets up
 # keyboard inputs.
+
+from pygame.locals import *
+
 import game_states.statechanger.statechanger
 from game_sprites.character.player_movement import *
-from game_sprites.powerup.powerup_types.bombeffect.explosion import *
 from game_sprites.powerup.powerup_types.bombs import *
 
 
@@ -14,6 +16,7 @@ from game_sprites.powerup.powerup_types.bombs import *
 def main():
     """ Main Program """
     BOMBEXPLODEEVENT = pygame.event.custom_type()
+    BOMBTIMEREVENT = pygame.event.custom_type()
     pygame.init()
     game_state = "setup"
 
@@ -34,29 +37,39 @@ def main():
                 timer.clock_tick()
                 current_level.time = current_level.time - 1
             if event.type == BOMBEXPLODEEVENT:
+                current_level.foreground.killBombTimer(bt)
                 b.explode()
+                pygame.sprite.Sprite.kill(b)
+                current_level.sprite_list.remove(b)
 
+            if event.type == BOMBTIMEREVENT and current_level.foreground.bt.bcounter > 0:
+                current_level.foreground.updateBombTimer(bt)
+            if event.type == BOMBTIMEREVENT and current_level.foreground.bt.bcounter == 0:
+                pygame.event.post(pygame.event.Event(BOMBEXPLODEEVENT))
             if event.type == pygame.QUIT:
                 # it will make exit the while loop
                 pygame.quit()
-            if event.type == pygame.KEYDOWN:
+            if event.type == KEYDOWN:
                 # Was it the Escape key? If so, stop the loop.
-                if event.key == pygame.K_ESCAPE:
+                if event.key == K_ESCAPE:
                     pygame.quit()
                 # Controls motion to left
                 if player.pathmaker == True and player.belowground == True:
-                    player_movement( event, player, path_maker )
+                    player_movement(event, player, path_maker)
                 elif not player.belowground:
-                    player_movement( event, player, path_maker )
-                if event.key == pygame.K_SPACE and current_level.bomb_num > 0:
+                    player_movement(event, player, path_maker)
+                if event.key == K_SPACE and current_level.bomb_num > 0:
                     b = Bomb()
                     b.rect.centerx = player.rect.centerx
                     b.rect.centery = player.rect.centery
-                    current_level.sprite_list.add( b )
-                    pygame.sprite.LayeredUpdates.add( current_level.sprites, b )
+                    current_level.sprite_list.add(b)
+                    pygame.sprite.LayeredUpdates.add(current_level.sprites, b)
                     current_level.bomb_num -= 1
-                    current_level.foreground.update_bomb_num( current_level.bomb_num )
-                    pygame.time.set_timer( BOMBEXPLODEEVENT, 3000 )
+                    current_level.foreground.update_bomb_num(current_level.bomb_num)
+                    bt = current_level.foreground.spawnBombTimer()
+                    current_level.sprite_list.add(bt)
+                    pygame.sprite.LayeredUpdates.add(current_level.sprites, bt)
+                    pygame.time.set_timer(BOMBTIMEREVENT, 1000)
 
             # stops main character when key is released
             if event.type == pygame.KEYUP:

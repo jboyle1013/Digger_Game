@@ -17,7 +17,7 @@ class Path_Maker( pygame.sprite.Sprite ):
         self.rect = self.image.get_rect()
         self.change_x = 0
         self.change_y = 0
-        self.level = Level( object, object, object, object, object, object, object, object )
+        self.level = Level(object, object, object, object, object, object, object, object)
         self.previous_Direction = None
         self.p_vh = None
         self.c_vh = None
@@ -27,6 +27,8 @@ class Path_Maker( pygame.sprite.Sprite ):
         self.path_coords = []
         self.all_path_coords = []
         self.path_edge_coords = []
+        self.path_mid_coords = []
+        self.path_mid_border_coords = []
 
     def update(self):
         """ Move the path. """

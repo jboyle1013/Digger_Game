@@ -15,6 +15,7 @@ class Bomb( PowerUp ):
         self.image = pygame.transform.smoothscale( self.image, (35, 35) )
         self.rect = self.image.get_rect()
 
+
     def explode(self):
         self.image = bomb
         pygame.gfxdraw.box( bomb, pygame.Rect( self.rect.left, self.rect.top, 35, 35 ), PATH_COLOR )

@@ -105,6 +105,11 @@ class Level( object ):
             y = coords[1]
             if self.game_grid[(y, x)] != 1:
                 self.game_grid[(y, x)] = 1
+        for coords in self.path_maker.path_edge_coords:
+            x = coords[0]
+            y = coords[1]
+            if self.game_grid[(y, x)] != 1:
+                self.game_grid[(y, x)] = 3
 
     def bomb_to_grid(self, coords):
         """ Adds bomb space to grid, use top left x and y coords. """

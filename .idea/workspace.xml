@@ -5,30 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="Added some images, gems and scoreboard and info bars">
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion00.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosions/regularExplosion08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/game_sprites/foreground/bombcounter/bombcounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/digger-game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/digger-game.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/character/main_character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/main_character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/path/path.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/path/path_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path_maker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/timer/timer.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/timer/timer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_states/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/setup/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levels/definition/level_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/definition/level_def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/game_levels/level0.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/game_levels/level0.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoring/scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/scoring/scoring.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +75,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="activate_this" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="digger-game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/Scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/Scripts/activate_this.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="rtfp-game-group02" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -111,13 +120,13 @@
       <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="rtfp-game-group02" />
+      <module name="digger-game" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\jorda\PycharmProjects\Digger_Game\venv\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Jordan\PycharmProjects\Digger_Game\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -147,8 +156,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.activate_this" />
+      <item itemvalue="Python.game" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.activate_this" />
         <item itemvalue="Python.game" />
       </list>
     </recent_temporary>
@@ -207,6 +222,9 @@
       <workItem from="1628802151420" duration="1664000" />
       <workItem from="1628810202706" duration="3181000" />
       <workItem from="1628819601340" duration="1618000" />
+      <workItem from="1629741238492" duration="4129000" />
+      <workItem from="1629737024027" duration="4757000" />
+      <workItem from="1629902659302" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
       <created>1625868988804</created>
@@ -287,13 +305,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/game_sprites/character/main_character.py</url>
-          <line>178</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -304,7 +315,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1628820347857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1629902852001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$activate_this.coverage" NAME="activate_this Coverage Results" MODIFIED="1629742283122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Scripts" />
     <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="slackPresenceActive">

@@ -1,4 +1,5 @@
 import pygame
+
 from game_vals.game_vals import *
 
 
@@ -15,3 +16,4 @@ class Path( pygame.sprite.Sprite ):
         self.image.fill( PATH_COLOR )
         # Set a reference to the image rect.
         self.rect = self.image.get_rect()
+

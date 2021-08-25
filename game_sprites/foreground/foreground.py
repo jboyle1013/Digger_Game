@@ -1,6 +1,7 @@
 import pygame
 import pygame.gfxdraw
 
+from game_sprites.foreground.bombcounter.bombcounter import BombCounter
 from game_vals.game_vals import *
 from levels.definition.level_def import Level
 
@@ -45,29 +46,40 @@ class Foreground( pygame.sprite.Sprite ):
         self.image.blit( self.bnumtext, [125, 590] )
         self.heart = pygame.image.load( "game_sprites/foreground/heart.png" )
         self.heart = pygame.transform.scale( self.heart, (30, 30) )
-        self.image.blit( self.heart, [900, 590] )
+        self.image.blit(self.heart, [900, 590])
         self.lifestr = "Lives: "
-        self.lifetext = self.font.render( str( self.lifestr ), 1, WHITE )
-        self.image.blit( self.lifetext, [835, 590] )
+        self.lifetext = self.font.render(str(self.lifestr), 1, WHITE)
+        self.image.blit(self.lifetext, [835, 590])
         self.LXstr = "X  "
-        self.LXtext = self.font.render( str( self.LXstr ), 1, WHITE )
-        self.image.blit( self.LXtext, [935, 590] )
+        self.LXtext = self.font.render(str(self.LXstr), 1, WHITE)
+        self.image.blit(self.LXtext, [935, 590])
 
-        self.Lnumtext = self.font.render( str( 3 ), 1, WHITE )
-        self.image.blit( self.Lnumtext, [955, 590] )
+        self.Lnumtext = self.font.render(str(3), 1, WHITE)
+        self.image.blit(self.Lnumtext, [955, 590])
+        self.bt = NotImplemented
 
     def update_scoreboard(self, score):
-        pygame.gfxdraw.filled_ellipse( foreground, 950, 20, 50, 35, WHITE )
+        pygame.gfxdraw.filled_ellipse(foreground, 960, 20, 50, 35, WHITE)
         self.score = score
-        self.scoretext = self.font.render( str( self.score ), 1, BLACK )
-        self.image.blit( self.scoretext, [940, 10] )
+        self.scoretext = self.font.render(str(self.score), 1, BLACK)
+        self.image.blit(self.scoretext, [940, 10])
 
     def update_bomb_num(self, bomb_num):
-        pygame.gfxdraw.box( foreground, pygame.Rect( 122, 580, 55, 55 ), TASK_BROWN )
-        self.bnumtext = self.font.render( str( bomb_num ), 1, WHITE )
-        self.image.blit( self.bnumtext, [125, 590] )
+        pygame.gfxdraw.box(foreground, pygame.Rect(122, 580, 55, 55), TASK_BROWN)
+        self.bnumtext = self.font.render(str(bomb_num), 1, WHITE)
+        self.image.blit(self.bnumtext, [125, 590])
 
     def update_life_num(self, life_num):
-        pygame.gfxdraw.box( foreground, pygame.Rect( 952, 580, 55, 55 ), TASK_BROWN )
-        self.lnumtext = self.font.render( str( life_num ), 1, WHITE )
-        self.image.blit( self.bnumtext, [955, 590] )
+        pygame.gfxdraw.box(foreground, pygame.Rect(952, 580, 55, 55), TASK_BROWN)
+        self.lnumtext = self.font.render(str(life_num), 1, WHITE)
+        self.image.blit(self.bnumtext, [955, 590])
+
+    def spawnBombTimer(self):
+        self.bt = BombCounter()
+        return self.bt
+
+    def updateBombTimer(self, bt):
+        self.bt.bombtimerupdate()
+
+    def killBombTimer(self, bt):
+        pygame.sprite.Sprite.kill(self.bt)
