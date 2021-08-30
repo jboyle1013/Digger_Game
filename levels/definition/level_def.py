@@ -113,23 +113,36 @@ class Level( object ):
                     self.path_maker.path_mid_coords.append( coords )
 
                 if val == 3:
-                    self.path_maker.path_mid_border_coords.append( coords )
+                    self.path_maker.path_mid_border_coords.append(coords)
 
                 if val == 4:
-                    self.path_maker.path_edge_coords.append( coords )
+                    self.path_maker.path_edge_coords.append(coords)
 
             elif self.game_grid[(y, x)] != 0:
                 pass
 
-            if self.game_grid[(y, x)] != 1 and x > 105:
-                self.game_grid[(y, x)] = val
+            if self.game_grid[(y, x)] != 1 and y > 105:
+                if self.game_grid[(y, x)] == 4 and val != 4:
+                    self.game_grid[(y, x)] = val
+                if self.game_grid[(y, x)] == 3:
+                    if self.game_grid[(y, x - 1)] == 4:
+                        self.game_grid[(y, x)] = 3
+                    elif val != 4:
+                        self.game_grid[(y, x)] = val
+                if self.game_grid[(y, x)] == 2:
+                    if val == 1:
+                        self.game_grid[(y, x)] = val
+                    else:
+                        self.game_grid[(y, x)] = 2
+                else:
+                    self.game_grid[(y, x)] = val
 
-            self.path_maker.uall_path_coords.remove( coords )
+            self.path_maker.uall_path_coords.remove(coords)
             if val == 1:
-                self.path_maker.mall_path_coords.append( coords )
+                self.path_maker.mall_path_coords.append(coords)
 
             if val == 2:
-                self.path_maker.mpath_mid_coords.append( coords )
+                self.path_maker.mpath_mid_coords.append(coords)
 
             if val == 3:
                 self.path_maker.mpath_mid_border_coords.append(coords)
@@ -150,19 +163,64 @@ class Level( object ):
             if self.game_grid[y + a, x + a] != 1:
                 self.game_grid[y + a, x + a] = 1
 
+    def direction_change_tile_down_left(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        lty = lt[1]
+        rtx = rt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        lby = lb[1]
+        rbx = rb[0]
+        rby = rb[1]
+        self.game_grid[my + 1:rby - 4, mx - 1:rbx + 2] = 2
+        self.game_grid[my:rby, rbx + 2] = 3
+        self.game_grid[my:rby + 1, rbx + 3:rbx + 7] = 4
+        self.game_grid[rby - 4, lbx:rbx + 3] = 3
+        self.game_grid[rby - 3:rby + 1, lbx:rbx + 3] = 4
+        self.game_grid[rty + 4, ltx:ltx + 11] = 3
+        self.game_grid[rty:rty + 4, ltx:ltx + 6] = 4
 
+    def direction_change_tile_down_right(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        lty = lt[1]
+        rtx = rt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        lby = lb[1]
+        rbx = rb[0]
+        rby = rb[1]
+        self.game_grid[my:lby - 3, lbx - 6:lbx - 2] = 4
+        self.game_grid[my:lby, lbx - 2] = 3
+        self.game_grid[my:lby - 1, lbx - 3:lbx - 7] = 4
+        self.game_grid[my + 1:lby - 4, lbx - 1:mx] = 2
 
-
-
-
-
-
-
-
+    # TODO
+    def direction_change_tile_up_left(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        lty = lt[1]
+        rtx = rt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        lby = lb[1]
+        rbx = rb[0]
+        rby = rb[1]
+        self.game_grid[rby - 4:my + 1, mx - 1:rbx + 2] = 2
+        self.game_grid[rby:my, rbx + 2] = 3
+        self.game_grid[rby + 1:my, rbx + 3:rbx + 7] = 4
+        self.game_grid[rby - 4, lbx:rbx + 3] = 3
+        self.game_grid[rby + 1:rby - 3, lbx:rbx + 3] = 4
+        self.game_grid[rty + 4, ltx:ltx + 11] = 3
+        self.game_grid[rty + 4:rty, ltx:ltx + 6] = 4
 
     def findend(self, i, j, a, output, index):
-        x = len( a )
-        y = len( a[0] )
+        x = len(a)
+        y = len(a[0])
 
         # flag to check column edge case,
         # initializing with 0
