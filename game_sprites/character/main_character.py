@@ -235,6 +235,13 @@ class Player(pygame.sprite.Sprite):
                                                                              self.rect.topright, self.rect.bottomleft,
                                                                              self.rect.bottomright)
 
+                        if self.dir_list[d - 1] != self.dir_list[d - 2]:
+                            if self.dir_list[d - 1] == "UP":
+                                if self.dir_list[d - 2] == "LEFT":
+                                    self.level.direction_change_tile_left_up(self.rect.center, self.rect.topleft,
+                                                                             self.rect.topright, self.rect.bottomleft,
+                                                                             self.rect.bottomright)
+
                 self.prevrleft = self.rect.left
                 self.prevrright = self.rect.right
                 self.prevrtop = self.rect.top

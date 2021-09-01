@@ -210,13 +210,32 @@ class Level( object ):
         lby = lb[1]
         rbx = rb[0]
         rby = rb[1]
-        self.game_grid[rby - 4:my + 1, mx - 1:rbx + 2] = 2
-        self.game_grid[rby:my, rbx + 2] = 3
-        self.game_grid[rby + 1:my, rbx + 3:rbx + 7] = 4
-        self.game_grid[rby - 4, lbx:rbx + 3] = 3
-        self.game_grid[rby + 1:rby - 3, lbx:rbx + 3] = 4
-        self.game_grid[rty + 4, ltx:ltx + 11] = 3
-        self.game_grid[rty + 4:rty, ltx:ltx + 6] = 4
+        self.game_grid[rty + 5:my + 1, mx - 2:rtx + 2] = 2
+        self.game_grid[rty + 4, ltx - 6:rtx + 3] = 3
+        self.game_grid[rty + 5:rty + 16, rtx + 2] = 3
+        self.game_grid[rty:rty + 4:, ltx - 6:rtx + 7] = 4
+        self.game_grid[rty + 5:rty + 16, rtx + 3: rtx + 7] = 4
+
+    def direction_change_tile_left_up(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        lty = lt[1]
+        rtx = rt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        lby = lb[1]
+        rbx = rb[0]
+        rby = rb[1]
+        self.game_grid[my:lby + 2, lbx + 5:mx] = 2
+
+        self.game_grid[my - 7:lby + 3, lbx + 4] = 3
+        self.game_grid[my - 7:lby + 6, lbx:lbx + 4] = 4
+        self.game_grid[lty:lby + 20, lbx - 6:lbx] = 0
+        self.game_grid[lty - 10:lby, lbx - 6:lbx] = 0
+
+        """self.game_grid[rty:rty + 4:, ltx - 6:rtx + 7] = 4
+        self.game_grid[rty + 5:rty + 16, rtx + 3: rtx + 7] = 4"""
 
     def findend(self, i, j, a, output, index):
         x = len(a)
