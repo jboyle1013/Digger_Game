@@ -39,7 +39,6 @@ class Level( object ):
     # Update everything on this level
     def update(self):
         """ Update everything in this level."""
-
         self.path_list.update()
         self.sprite_list.update()
         self.gridupdate()
@@ -64,12 +63,21 @@ class Level( object ):
         self.path_list.add( npath )
         self.sprite_list.add( npath )
 
+    def bpath_gen(self, xy):
+        """ Draws the bomb path """
+
+        for i in range( 4 ):
+            npath = Path()
+            npath.rect.topleft = xy[i]
+            self.path_list.add( npath )
+            self.sprite_list.add( npath )
+
     def rand_create(self, nums):
-        xvals = random.sample(range(25, 925), nums)
+        xvals = random.sample( range( 25, 925 ), nums )
         yvals = random.sample( range( 150, 550 ), nums )
         slist = []
-        for i in range(nums):
-            slist.append([xvals[i], yvals[i]])
+        for i in range( nums ):
+            slist.append( [xvals[i], yvals[i]] )
         return slist
 
 
@@ -92,11 +100,10 @@ class Level( object ):
 
     def gridmaker(self):
         """ Creates game grid """
+        ggsky = np.zeros( (104, 1000) )
         game_gridglevel = np.ones( (1, 1000) )
-        game_gridsky = np.zeros( (105, 1000) )
-        t = np.concatenate( (game_gridsky, game_gridglevel) )
-        gg = np.zeros( (519, 1000) )
-        self.game_grid = np.concatenate((t, gg))
+        game_grid = np.zeros( (520, 1000) )
+        self.game_grid = np.concatenate( (ggsky, game_gridglevel, game_grid) )
 
     def gridupdate(self):
         """ Updates game grid """
@@ -149,19 +156,29 @@ class Level( object ):
 
             if val == 4:
                 self.path_maker.mpath_edge_coords.append(coords)
+        pass
 
     def bomb_to_grid(self, coords):
-        """ Adds bomb space to grid, use top left x and y coords. """
+        """ Adds bomb space to grid, use center x and y coords. """
         x = coords[0]
         y = coords[1]
-        for i in range(100):
-            a = i + 1
-            if self.game_grid[y + a, x] != 1:
+        xy = [(x - 50, y - 50), (x, y - 50), (x - 50, y), (x, y)]
+        self.bpath_gen( xy )
+        for i in range( 51 ):
+            self.game_grid[y + i, x - 25:x + 25] = 1
+
+            """if self.game_grid[y + a, x] != 1:
                 self.game_grid[y + a, x] = 1
+            if self.game_grid[y - a, x] != 1:
+                self.game_grid[y - a, x] = 1
             if self.game_grid[y, x + a] != 1:
                 self.game_grid[y, x + a] = 1
             if self.game_grid[y + a, x + a] != 1:
                 self.game_grid[y + a, x + a] = 1
+            if self.game_grid[y, x - a] != 1:
+                self.game_grid[y, x - a] = 1
+            if self.game_grid[y - a, x - a] != 1:
+                self.game_grid[y - a, x - a] = 1"""
 
     def direction_change_tile_down_left(self, mid, lt, rt, lb, rb):
         mx = mid[0]
@@ -227,9 +244,56 @@ class Level( object ):
         self.game_grid[lty:lby + 20, lbx - 6:lbx] = 0
         self.game_grid[lty - 10:lby, lbx - 6:lbx] = 0
 
+    def direction_change_tile_right_up(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        rbx = rb[0]
+        rby = rb[1]
+
+        self.game_grid[my:rby + 2, mx:rbx - 4] = 2
+        self.game_grid[my:rby + 5, rbx - 4] = 3
+        self.game_grid[my:rby + 6, rbx - 3:rbx + 1] = 5
+        self.game_grid[rby + 2, lbx:rbx - 3] = 3
+        self.game_grid[rby + 3:rby + 7, lbx:rbx + 1] = 5
+
+    def direction_change_tile_left_down(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        lty = lt[1]
+        lbx = lb[0]
+        lby = lb[1]
+
+        self.game_grid[lty - 1:my:, lbx + 5:mx] = 2
+        self.game_grid[lty - 2:my + 7, lbx + 4] = 3
+        self.game_grid[lty - 2:my + 7, lbx:lbx + 4] = 4
+
+    def direction_change_tile_right_down(self, mid, lt, rt, lb, rb):
+        mx = mid[0]
+        my = mid[1]
+        ltx = lt[0]
+        rtx = rt[0]
+        rty = rt[1]
+        lbx = lb[0]
+        rbx = rb[0]
+        rby = rb[1]
+
+        self.game_grid[rty - 1:my, mx + 7:rtx - 4] = 2
+        self.game_grid[rty - 2:my, rbx - 4] = 3
+        self.game_grid[rty - 2:my, rbx - 3:rbx + 1] = 4
+        self.game_grid[rty - 2, ltx:rtx - 4] = 3
+        self.game_grid[rty - 6:rty - 2, lbx:rbx + 1] = 4
+        """self.game_grid[rby + 2, lbx:rbx-3] = 3
+        self.game_grid[rby+3:rby + 7, lbx:rbx + 1] = 5"""
+
+        """self.game_grid[rby + 2, lbx:rbx-3] = 3
+        self.game_grid[rby+3:rby + 7, lbx:rbx + 1] = 5"""
+
     def findend(self, i, j, a, output, index):
-        x = len(a)
-        y = len(a[0])
+        x = len( a )
+        y = len( a[0] )
 
         # flag to check column edge case,
         # initializing with 0

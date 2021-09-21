@@ -10,8 +10,6 @@ class Ground(pygame.sprite.Sprite):
 
         super().__init__()
         self._layer = 2
-        width = 1000
-        height = 500
         self.image = pygame.image.load( "game_sprites/ground/dirt.png" ).convert_alpha()
         self.image = pygame.transform.smoothscale( self.image, (1000, 500) )
 

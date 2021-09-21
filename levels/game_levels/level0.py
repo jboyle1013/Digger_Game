@@ -1,5 +1,3 @@
-import pygame
-
 from game_sprites.enemies.enemy_types.gobbler import Gobbler
 from game_sprites.gems.gem_def.gems_def import *
 
@@ -19,10 +17,7 @@ class Level_0( Level ):
         self.time = 60
 
         self.create()
-        gobbler1 = Gobbler( self.path_maker )
-        gobbler1.rect.centerx = 900
-        gobbler1.rect.bottom = 125
-        pygame.sprite.LayeredUpdates.add( self.sprites, gobbler1 )
-
-
-
+        self.gobbler1 = Gobbler( self.path_maker )
+        self.gobbler1.rect.centerx = 900
+        self.gobbler1.rect.bottom = 125
+        pygame.sprite.LayeredUpdates.add( self.sprites, self.gobbler1 )
