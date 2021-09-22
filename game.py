@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import pygame
-from pygame.locals import *
+
 
 class App:
     def __init__(self):

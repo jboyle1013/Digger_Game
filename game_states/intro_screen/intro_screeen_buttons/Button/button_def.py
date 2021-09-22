@@ -22,6 +22,16 @@ class PButtton( pygame.sprite.Sprite ):
         self.rect.centery = y
         self.image.blit( self.button, [0, 0] )
 
+    def rollon(self):
+        self.button = pygame.image.load( "game_states/intro_screen/Play-rollon.png" ).convert_alpha()
+        self.button = pygame.transform.smoothscale( self.button, (140, 80) )
+        self.image.blit( self.button, [0, 0] )
+
+    def rolloff(self):
+        self.button = pygame.image.load( "game_states/intro_screen/Play.png" ).convert_alpha()
+        self.button = pygame.transform.smoothscale( self.button, (140, 80) )
+        self.image.blit( self.button, [0, 0] )
+
 
 class IButtton( pygame.sprite.Sprite ):
 
@@ -36,4 +46,14 @@ class IButtton( pygame.sprite.Sprite ):
         self.button = pygame.transform.smoothscale( self.button, (140, 80) )
         self.rect.centerx = x
         self.rect.centery = y
+        self.image.blit( self.button, [0, 0] )
+
+    def rollon(self):
+        self.button = pygame.image.load( "game_states/intro_screen/instructions-rollon.png" ).convert_alpha()
+        self.button = pygame.transform.smoothscale( self.button, (140, 80) )
+        self.image.blit( self.button, [0, 0] )
+
+    def rolloff(self):
+        self.button = pygame.image.load( "game_states/intro_screen/instructions.png" ).convert_alpha()
+        self.button = pygame.transform.smoothscale( self.button, (140, 80) )
         self.image.blit( self.button, [0, 0] )

@@ -21,3 +21,13 @@ class Instructclose( pygame.sprite.Sprite ):
         self.exit = pygame.image.load( "game_states/intruction_screen/exit.png" ).convert_alpha()
         self.exit = pygame.transform.smoothscale( self.exit, (40, 40) )
         self.image.blit( self.exit, [0, 0] )
+
+    def rollon(self):
+        self.exit = pygame.image.load( "game_states/intruction_screen/exit_rolledover.png" ).convert_alpha()
+        self.exit = pygame.transform.smoothscale( self.exit, (40, 40) )
+        self.image.blit( self.exit, [0, 0] )
+
+    def rolloff(self):
+        self.exit = pygame.image.load( "game_states/intruction_screen/exit.png" ).convert_alpha()
+        self.exit = pygame.transform.smoothscale( self.exit, (40, 40) )
+        self.image.blit( self.exit, [0, 0] )

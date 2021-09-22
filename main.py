@@ -34,6 +34,23 @@ def main():
                 # Was it the Escape key? If so, stop the loop.
                 if event.key == K_ESCAPE:
                     pygame.quit()
+            if event.type == MOUSEMOTION:
+                x, y = event.pos
+                if game_state == "instruct_screen":
+                    if Exit.rect.collidepoint( x, y ):
+                        Exit.rollon()
+                    else:
+                        Exit.rolloff()
+                if pgm.playbutton.rect.collidepoint( x, y ):
+                    pgm.playbutton.rollon()
+                else:
+                    pgm.playbutton.rolloff()
+
+                if pgm.instructbutton.rect.collidepoint( x, y ):
+                    pgm.instructbutton.rollon()
+                else:
+                    pgm.instructbutton.rolloff()
+
             if event.type == MOUSEBUTTONUP:
                 x, y = event.pos
                 if pgm.instructbutton.rect.collidepoint( x, y ):
@@ -42,12 +59,13 @@ def main():
                     pygame.sprite.LayeredUpdates.add( pgm.pregamesprites, instruct )
                     pygame.sprite.LayeredUpdates.add( pgm.pregamesprites, Exit )
                     game_state = "instruct_screen"
-                if Exit.rect.collidepoint( x, y ):
-                    pygame.sprite.Sprite.kill( instruct )
-                    pygame.sprite.Sprite.kill( Exit )
-                    pgm.pregamesprite_list.remove( instruct )
-                    pgm.pregamesprite_list.remove( Exit )
-                    game_state = "intro_screen"
+                if game_state == "instruct_screen":
+                    if Exit.rect.collidepoint( x, y ):
+                        pygame.sprite.Sprite.kill( instruct )
+                        pygame.sprite.Sprite.kill( Exit )
+                        pgm.pregamesprite_list.remove( instruct )
+                        pgm.pregamesprite_list.remove( Exit )
+                        game_state = "intro_screen"
                 if pgm.playbutton.rect.collidepoint( x, y ) and game_state != "instruct_screen":
                     game_state = "playhit"
 
