@@ -25,4 +25,4 @@ class IntroScreen( pygame.sprite.Sprite ):
 
         self.image.blit( self.sky, [0, 0] )
         self.image.blit( self.ground, [0, 200] )
-        self.image.blit( self.words, [250, 30] )
+        self.image.blit( self.words, [300, 10] )
