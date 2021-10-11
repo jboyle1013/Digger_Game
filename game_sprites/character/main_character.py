@@ -23,7 +23,7 @@ class Player( pygame.sprite.Sprite ):
         self.width = 40
         self.height = 40
         self.image = pygame.image.load( "game_sprites/character/alien.png" ).convert_alpha()
-        self.image = pygame.transform.smoothscale( self.image, (45, 45) )
+        self.image = pygame.transform.smoothscale( self.image, (40, 40) )
         self.path = path
         # Set a reference to the image rect.
         self.rect = self.image.get_rect()
@@ -33,7 +33,7 @@ class Player( pygame.sprite.Sprite ):
         self.change_x = 0
         self.change_y = 0
         self.bombs = 3
-        self.lives = 3
+        self.lives = TOTAL_LIVES
         self.dir_list = []
         self.prevrleft = None
         self.prevrright = None
@@ -147,16 +147,16 @@ class Player( pygame.sprite.Sprite ):
 
                 if self.change_x != 0:
                     self.path.uall_path_coords.append( [nx, self.rect.centery, 1] )
-                    self.path.uall_path_coords.append( [nx, self.rect.centery + 1, 1] )
+                    """self.path.uall_path_coords.append( [nx, self.rect.centery + 1, 1] )
                     self.path.uall_path_coords.append( [nx, self.rect.centery + 2, 1] )
                     self.path.uall_path_coords.append( [nx, self.rect.centery - 1, 1] )
-                    self.path.uall_path_coords.append( [nx, self.rect.centery - 2, 1] )
+                    self.path.uall_path_coords.append( [nx, self.rect.centery - 2, 1] )"""
 
                     self.path.uall_path_coords.append( [px, self.rect.centery, 1] )
-                    self.path.uall_path_coords.append( [px, self.rect.centery + 1, 1] )
+                    """self.path.uall_path_coords.append( [px, self.rect.centery + 1, 1] )
                     self.path.uall_path_coords.append( [px, self.rect.centery + 2, 1] )
                     self.path.uall_path_coords.append( [px, self.rect.centery - 1, 1] )
-                    self.path.uall_path_coords.append( [px, self.rect.centery - 2, 1] )
+                    self.path.uall_path_coords.append( [px, self.rect.centery - 2, 1] )"""
 
                     """self.path.uall_path_coords.append( [nlex, self.rect.top, 4] )
 
@@ -189,16 +189,16 @@ class Player( pygame.sprite.Sprite ):
 """
                 if self.change_y != 0:
                     self.path.uall_path_coords.append( [self.rect.centerx, ny, 1] )
-                    self.path.uall_path_coords.append( [self.rect.centerx + 1, ny, 1] )
+                    """self.path.uall_path_coords.append( [self.rect.centerx + 1, ny, 1] )
                     self.path.uall_path_coords.append( [self.rect.centerx + 2, ny, 1] )
                     self.path.uall_path_coords.append( [self.rect.centerx - 1, ny, 1] )
-                    self.path.uall_path_coords.append( [self.rect.centerx - 2, ny, 1] )
+                    self.path.uall_path_coords.append( [self.rect.centerx - 2, ny, 1] )"""
 
                     self.path.uall_path_coords.append( [self.rect.centerx, py, 1] )
-                    self.path.uall_path_coords.append( [self.rect.centerx + 1, py, 1] )
+                    """self.path.uall_path_coords.append( [self.rect.centerx + 1, py, 1] )
                     self.path.uall_path_coords.append( [self.rect.centerx + 2, py, 1] )
                     self.path.uall_path_coords.append( [self.rect.centerx - 1, py, 1] )
-                    self.path.uall_path_coords.append( [self.rect.centerx - 2, py, 1] )
+                    self.path.uall_path_coords.append( [self.rect.centerx - 2, py, 1] )"""
 
                     """self.path.uall_path_coords.append( [self.rect.left, ny, 4] )
 

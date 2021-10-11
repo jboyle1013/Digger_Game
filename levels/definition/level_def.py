@@ -34,7 +34,7 @@ class Level( object ):
         self.screen = pygame.display.set_mode( self.size )  # the screen
         # Background image
         self.base_font = pygame.font.Font( None, 32 )  # game font
-        self.bomb_num = 3  # number of bombs available to player
+        self.bomb_num = TOTAL_BOMBS  # number of bombs available to player
 
     # Update everything on this level
     def update(self):
@@ -65,12 +65,16 @@ class Level( object ):
 
     def bpath_gen(self, xy):
         """ Draws the bomb path """
-
+        p_health_lost = False
         for i in range( 4 ):
             npath = Path()
             npath.rect.topleft = xy[i]
             self.path_list.add( npath )
             self.sprite_list.add( npath )
+            if self.player.rect.colliderect( npath ) and p_health_lost == False:
+                self.foreground.update_life_num( self.player.lives - 1 )
+                self.player.lives = self.player.lives - 1
+                p_health_lost = True
 
     def rand_create(self, nums):
         xvals = random.sample( range( 25, 925 ), nums )
@@ -79,9 +83,6 @@ class Level( object ):
         for i in range( nums ):
             slist.append( [xvals[i], yvals[i]] )
         return slist
-
-
-
 
     def eventtimerstart(self, time):
         """ Timer that will be used for spawning mobs """
@@ -100,7 +101,7 @@ class Level( object ):
 
     def gridmaker(self):
         """ Creates game grid """
-        ggsky = np.zeros( (104, 1000) )
+        ggsky = np.zeros( (105, 1000) )
         game_gridglevel = np.ones( (1, 1000) )
         game_grid = np.zeros( (520, 1000) )
         self.game_grid = np.concatenate( (ggsky, game_gridglevel, game_grid) )
@@ -120,10 +121,10 @@ class Level( object ):
                     self.path_maker.path_mid_coords.append( coords )
 
                 if val == 3:
-                    self.path_maker.path_mid_border_coords.append(coords)
+                    self.path_maker.path_mid_border_coords.append( coords )
 
                 if val == 4:
-                    self.path_maker.path_edge_coords.append(coords)
+                    self.path_maker.path_edge_coords.append( coords )
 
             elif self.game_grid[(y, x)] != 0:
                 pass
@@ -144,18 +145,18 @@ class Level( object ):
                 else:
                     self.game_grid[(y, x)] = val
 
-            self.path_maker.uall_path_coords.remove(coords)
+            self.path_maker.uall_path_coords.remove( coords )
             if val == 1:
-                self.path_maker.mall_path_coords.append(coords)
+                self.path_maker.mall_path_coords.append( coords )
 
             if val == 2:
-                self.path_maker.mpath_mid_coords.append(coords)
+                self.path_maker.mpath_mid_coords.append( coords )
 
             if val == 3:
-                self.path_maker.mpath_mid_border_coords.append(coords)
+                self.path_maker.mpath_mid_border_coords.append( coords )
 
             if val == 4:
-                self.path_maker.mpath_edge_coords.append(coords)
+                self.path_maker.mpath_edge_coords.append( coords )
         pass
 
     def bomb_to_grid(self, coords):
@@ -290,6 +291,22 @@ class Level( object ):
 
         """self.game_grid[rby + 2, lbx:rbx-3] = 3
         self.game_grid[rby+3:rby + 7, lbx:rbx + 1] = 5"""
+
+    def level_maker(self, nums, player, ground, path_maker, path, background, enemy, score, foreground):
+        """ This is function that makes new levels.
+        nums[0] is the number of gems.
+         nums[1] is the number of enemies
+         nums[2] is the number of the new level"""
+        lname = "Level" + str( nums[2] )
+        initlist = [self, player, ground, path_maker, path, background, enemy, score, foreground]
+
+        nlevel = type( lname,
+                       (Level),
+                       {"__init__": initlist,
+                        "jewel_num": nums[0],
+                        "enemy_num": nums[1]}
+                       )
+        return nlevel
 
     def findend(self, i, j, a, output, index):
         x = len( a )

@@ -18,6 +18,6 @@ class Level_0( Level ):
 
         self.create()
         self.gobbler1 = Gobbler( self.path_maker )
-        self.gobbler1.rect.centerx = 900
+        self.gobbler1.rect.centerx = 850
         self.gobbler1.rect.bottom = 125
         pygame.sprite.LayeredUpdates.add( self.sprites, self.gobbler1 )

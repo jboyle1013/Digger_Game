@@ -1,3 +1,5 @@
+import math as m
+
 import pygame
 
 from game_vals.game_vals import *
@@ -22,6 +24,7 @@ class Enemy( pygame.sprite.Sprite ):
         self.height = 40
         self.image = pygame.Surface( [self.width, self.height] )
         self.path = path
+        self.dir_list = []
         # Set a reference to the image rect.
         self.rect = self.image.get_rect()
         self.belowground = False
@@ -62,21 +65,21 @@ class Enemy( pygame.sprite.Sprite ):
     # mob movement:
     def go_left(self):
         """ Called when the user hits the left arrow. """
-        self.change_x = -5
+        self.change_x = -3
 
     def go_right(self):
         """ Called when the user hits the right arrow. """
-        self.change_x = 5
+        self.change_x = 3
 
     def go_up(self):
         """ Called when the user hits the up arrow. """
         if self.rect.bottom > 125:
-            self.change_y = -5
+            self.change_y = -3
 
     def go_down(self):
         """ Called when the user hits the down arrow. """
         if self.rect.bottom < SCREEN_HEIGHT:
-            self.change_y = 5
+            self.change_y = 3
 
     def stop(self):
         """ Called when the user lets off the keyboard. """
@@ -100,4 +103,32 @@ class Enemy( pygame.sprite.Sprite ):
         else:
             self.belowground = False
 
+    def moveinterpret(self, dir):
 
+        self.dir_list.append( dir )
+        if dir == "LEFT":
+            self.go_left()
+
+        if dir == "RIGHT":
+            self.go_right()
+
+        if dir == "UP":
+            self.go_up()
+
+        if dir == "DOWN":
+            self.go_down()
+
+        if dir == None or dir == "STAY":
+            self.stop()
+
+        if self.dir_list[-3:-1:1] == None:
+            dist_list = []
+            path_collide_list = pygame.sprite.spritecollide( self, self.level.path_list, False )
+            for path in path_collide_list:
+                dist = m.dist( self.rect.center, path )
+                dist_list.append( dist )
+            dist_list.sort()
+            for path in path_collide_list:
+                dist = m.dist( self.rect.center, path )
+                if dist == dist_list[0]:
+                    self.rect.center = path.rect.center

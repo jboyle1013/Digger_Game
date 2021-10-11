@@ -79,9 +79,17 @@ def setup():
         clock.tick( 60 )
     """
 
-    player.rect.x = 340
+    for i in range( 950 ):
+        x = i + 25
+        npath = Path()
+        npath.rect.center = (x, 105)
+        current_level.path_list.add( npath )
+        current_level.sprite_list.add( npath )
+
     player.rect.bottom = 125
     ground.rect.bottom = 625
+    player.rect.centerx = 340
+    player.rect.centery = 105
     path_maker.rect.centerx = player.rect.centerx
     path_maker.rect.centery = player.rect.centery
     ngem = current_level.rand_create( current_level.jewel_num )

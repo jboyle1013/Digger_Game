@@ -6,10 +6,10 @@
 from pygame.locals import *
 
 from game_sprites.character.player_movement import *
+from game_sprites.enemies.enemy_def.npc_movement import *
 from game_states.intruction_screen.instruct_screen import *
 from game_states.intruction_screen.instructclose import *
 from game_states.statechanger.statechanger import *
-from pathfinder.astar import *
 
 
 # Import and initialize the pygame library
@@ -144,7 +144,8 @@ def main():
                     player.stopy()
                     path_maker.stopy()
         # update screen
-
+        poss_dir = ndig_movement( player, current_level.gobbler1, current_level.game_grid, current_level )
+        current_level.gobbler1.moveinterpret( poss_dir )
         # Update items in the level
 
         current_level.update()
@@ -156,9 +157,9 @@ def main():
         # There is only one level that has been created.
         # TODO
         # Implement more levels these systems.
-        new_loc = astar( current_level.game_grid, current_level.gobbler1.rect.center, player.rect.center,
+        """new_loc = astar( current_level.game_grid, current_level.gobbler1.rect.center, player.rect.center,
                          allow_diagonal_movement=False )
-        loc_list.append( new_loc )
+        loc_list.append( new_loc )"""
         # ALL CODE TO DRAW SHOULD GO BELOW THIS COMMENT
         # Draw background and sprites
         current_level.draw( screen )
@@ -171,6 +172,12 @@ def main():
 
         # Ensure program maintains a rate of 30 frames per second
         clock.tick( 30 )
+
+    clock = pygame.time.Clock()
+    between_levels = True
+    while between_levels:
+        clock.tick( 30 )
+        pass
 
     clock = pygame.time.Clock()
     endScreen = True

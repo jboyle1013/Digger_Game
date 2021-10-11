@@ -1,6 +1,10 @@
 import pygame
 
+from game_vals.game_vals import *
+
 scoreIncrement = 5
+
+
 class Score( object ):
     """ to keep track of the score.
     """
@@ -14,7 +18,7 @@ class Score( object ):
         self.color = pygame.Color( "white" )
         self.scoreIncrement = 100
         self.lastscore = -1
-        self.SCORE = 0
+        self.SCORE = TOTAL_POINTS
         self.NAME = ''
 
     def scoreupdate(self):
