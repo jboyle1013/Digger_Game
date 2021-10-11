@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game_states/endlevel/levelrecap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_states/endlevel/nextlevel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/character/alien.png" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/alien.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/character/main_character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/main_character.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/npc_movement.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/npc_movement.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_types/gobbler.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_types/gobbler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_states/running/in_game/in_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/running/in_game/in_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_states/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/setup/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_vals/game_vals.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_vals/game_vals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/definition/level_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/definition/level_def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/game/const_game_vals.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/game_levels/level0.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/game_levels/level0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoring/scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/scoring/scoring.py" afterDir="false" />
-    </list>
+    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="set up menu, still working on pathfinding" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -272,6 +255,7 @@
       <workItem from="1632768196443" duration="31000" />
       <workItem from="1633435342890" duration="2927000" />
       <workItem from="1633445127113" duration="607000" />
+      <workItem from="1633984888519" duration="377000" />
     </task>
     <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
       <created>1625868988804</created>
@@ -357,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632326396351</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="set up menu, still working on pathfinding">
+      <created>1633984931041</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1633984931041</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +383,8 @@
     <MESSAGE value="finishing grid setup" />
     <MESSAGE value="setup menu, starting a* for pathfinding" />
     <MESSAGE value="set up menu, starting a* for pathfinding" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up menu, starting a* for pathfinding" />
+    <MESSAGE value="set up menu, still working on pathfinding" />
+    <option name="LAST_COMMIT_MESSAGE" value="set up menu, still working on pathfinding" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -401,7 +393,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py</url>
-          <line>122</line>
+          <line>123</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
@@ -423,7 +415,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Digger_Game$activate_this.coverage" NAME="activate_this Coverage Results" MODIFIED="1629742283122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Scripts" />
     <SUITE FILE_PATH="coverage/Digger_Game$pycrunch_engine___auto.coverage" NAME="pycrunch-engine - auto Coverage Results" MODIFIED="1631017335476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1633438285465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1633987582483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="discordPresenceActive">
