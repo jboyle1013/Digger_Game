@@ -6,7 +6,7 @@ from game_vals.game_vals import *
 from levels.definition.level_def import Level
 
 
-class Enemy( pygame.sprite.Sprite ):
+class Enemy(pygame.sprite.Sprite):
     """ This class is the superclass for all enemis. """
 
     # -- Methods
@@ -22,7 +22,7 @@ class Enemy( pygame.sprite.Sprite ):
         self._layer = 6
         self.width = 40
         self.height = 40
-        self.image = pygame.Surface( [self.width, self.height] )
+        self.image = pygame.Surface([self.width, self.height])
         self.path = path
         self.dir_list = []
         # Set a reference to the image rect.
@@ -34,7 +34,7 @@ class Enemy( pygame.sprite.Sprite ):
         self.rect.center = [1000, 750]
         self.direction_list = []
         # List of sprites we can bump against
-        self.level = Level( object, object, object, object, object, object, object, object )
+        self.level = Level(object, object, object, object, object, object, object, object)
 
     def update(self):
         """ Move the mob. """
@@ -103,9 +103,9 @@ class Enemy( pygame.sprite.Sprite ):
         else:
             self.belowground = False
 
-    def moveinterpret(self, dir):
+    def moveinterpret(self, dir, path_collide_list):
 
-        self.dir_list.append( dir )
+        self.dir_list.append(dir)
         if dir == "LEFT":
             self.go_left()
 
@@ -120,15 +120,43 @@ class Enemy( pygame.sprite.Sprite ):
 
         if dir == None or dir == "STAY":
             self.stop()
-
-        if self.dir_list[-3:-1:1] == None:
+        nlist = self.dir_list[-3:-1:1]
+        l = len(self.dir_list)
+        tf = (all(ele == None for ele in nlist) and l > 5)
+        if tf:
+            c = self.rect.center
+            path_opts = []
+            rd = self.dir_list
+            rd.reverse()
+            wanted_dir = next(item for item in rd if item is not None)
             dist_list = []
-            path_collide_list = pygame.sprite.spritecollide( self, self.level.path_list, False )
-            for path in path_collide_list:
-                dist = m.dist( self.rect.center, path )
-                dist_list.append( dist )
+            for paths in path_collide_list:
+                if wanted_dir == "DOWN":
+                    if self.rect.centery < paths.rect.centery < self.rect.centery + 6:
+                        path_opts.append(paths)
+                        dist = m.dist(self.rect.center, paths.rect.center)
+                        dist_list.append(dist)
+
+                elif wanted_dir == "UP":
+                    if self.rect.centery > paths.rect.centery > self.rect.centery - 6:
+                        path_opts.append(paths)
+                        dist = m.dist(self.rect.center, paths.rect.center)
+                        dist_list.append(dist)
+
+                elif wanted_dir == "RIGHT":
+                    if self.rect.centerx < paths.rect.centerx < self.rect.centerx + 6:
+                        path_opts.append(paths)
+                        dist = m.dist(self.rect.center, paths.rect.center)
+                        dist_list.append(dist)
+
+                elif wanted_dir == "LEFT":
+                    if self.rect.centerx > paths.rect.centerx > self.rect.centerx - 6:
+                        path_opts.append(paths)
+                        dist = m.dist(self.rect.center, paths.rect.center)
+                        dist_list.append(dist)
+
             dist_list.sort()
-            for path in path_collide_list:
-                dist = m.dist( self.rect.center, path )
-                if dist == dist_list[0]:
-                    self.rect.center = path.rect.center
+            if len(path_opts) == 1:
+                self.rect.center = path_opts[0].rect.center
+            if len(path_opts) == 0:
+                pass

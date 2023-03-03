@@ -1,9 +1,6 @@
 import pygame
 import pygame.gfxdraw
 
-from game_vals.game_vals import *
-from levels.definition.level_def import Level
-
 
 class Gems_Def( pygame.sprite.Sprite ):
     """ This class represents the gems that the player

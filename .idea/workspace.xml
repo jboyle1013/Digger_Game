@@ -4,22 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game_states/endlevel/levelrecap.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game_states/endlevel/nextlevel.py" afterDir="false" />
+    <list default="true" id="0fe22e9e-456d-48d8-88df-a32be80b67c2" name="Default Changelist" comment="finishing grid setup">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_25_2021_5_14_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_25_2021_5_14_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_sprites/character/alien.png" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/alien.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/background/background.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/background/background.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/character/main_character.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/main_character.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/character/player_movement.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/character/player_movement.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/npc_movement.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_def/npc_movement.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_sprites/enemies/enemy_types/gobbler.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/enemies/enemy_types/gobbler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/foreground/bombcounter/bombcounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/foreground/bombcounter/bombcounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/foreground/foreground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/gems/gem_def/gems_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/gems/gem_def/gems_def.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/ground/ground.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/ground/ground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/path/path.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/path/path_maker.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/path/path_maker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerdown/powerdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerdown/powerdown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_def/powerup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosion.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombeffect/explosion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/powerup/powerup_types/bombs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/timer/timer.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/timer/timer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_sprites/timer/timerbackground.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_sprites/timer/timerbackground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/endlevel/levelrecap.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/endlevel/levelrecap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/intro_screeen_buttons/Button/button_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/intro_screeen_buttons/Button/button_def.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/intro_screeen_buttons/Button/rounded_rect.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/intro_screeen_buttons/Button/rounded_rect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/intro_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/intro_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/intro_screen_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/intro_screen_setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/introscreenleave.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/introscreenleave.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intro_screen/introscreenrunning.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intro_screen/introscreenrunning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intruction_screen/instruct_screen.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intruction_screen/instruct_screen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/intruction_screen/instructclose.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/intruction_screen/instructclose.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/pregame_manager/pregame_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/pregame_manager/pregame_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_states/running/in_game/in_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/running/in_game/in_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_states/setup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/setup/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_states/statechanger/statechanger.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_states/statechanger/statechanger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_vals/game_vals.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_vals/game_vals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/levels/definition/level_def.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/definition/level_def.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levels/game/const_game_vals.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/levels/game_levels/level0.py" beforeDir="false" afterPath="$PROJECT_DIR$/levels/game_levels/level0.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pathfinder/astar.py" beforeDir="false" afterPath="$PROJECT_DIR$/pathfinder/astar.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoring/scoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/scoring/scoring.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +61,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -46,8 +70,8 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="MacroExpansionManager">
-    <option name="directoryName" value="rwxy4603" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1srdRmmNoJsChwW0fBIii3tN6Jv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -58,30 +82,21 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jorda\Digger_Game\game_sprites\gems\gem_types" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jorda\Digger_Game\game_states\intruction_screen" />
-      <recent name="C:\Users\jorda\Digger_Game\game_states\intro_screen" />
       <recent name="C:\Users\Jordan\PycharmProjects\Digger_Game\game_states\running\in_game" />
       <recent name="C:\Users\jorda\Digger_Game\game_sprites\gems" />
       <recent name="C:\Users\jorda\Digger_Game\levels\definition\" />
+      <recent name="C:\Users\jorda\Digger_Game\levels\definition" />
+      <recent name="C:\Users\jorda\PycharmProjects\Digger_Game\game_sprites\powerup\powerup_def" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -136,7 +151,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\jorda\Digger_Game\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Jordan\PycharmProjects\Digger_Game\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -244,34 +259,11 @@
       <workItem from="1630515085602" duration="79000" />
       <workItem from="1630515174305" duration="367000" />
       <workItem from="1630515554798" duration="1352000" />
-      <workItem from="1630586916212" duration="126000" />
-      <workItem from="1630588194464" duration="6298000" />
-      <workItem from="1630598644860" duration="907000" />
-      <workItem from="1631017232347" duration="879000" />
-      <workItem from="1631189682568" duration="1156000" />
-      <workItem from="1631203669135" duration="2518000" />
-      <workItem from="1631282407184" duration="2499000" />
-      <workItem from="1631620354510" duration="35000" />
-      <workItem from="1631620408713" duration="1306000" />
-      <workItem from="1631823143855" duration="4000" />
-      <workItem from="1632226484925" duration="3261000" />
-      <workItem from="1632232303320" duration="12585000" />
-      <workItem from="1632258692310" duration="769000" />
-      <workItem from="1632262283374" duration="66000" />
-      <workItem from="1632262439839" duration="5997000" />
-      <workItem from="1632273534128" duration="150000" />
-      <workItem from="1632324933740" duration="737000" />
-      <workItem from="1632343296868" duration="4417000" />
-      <workItem from="1632363512534" duration="1977000" />
-      <workItem from="1632402275844" duration="8075000" />
-      <workItem from="1632416091944" duration="8441000" />
-      <workItem from="1632430069309" duration="3391000" />
-      <workItem from="1632505345364" duration="579000" />
-      <workItem from="1632507434425" duration="12000" />
-      <workItem from="1632590659805" duration="118000" />
-      <workItem from="1632768196443" duration="31000" />
-      <workItem from="1633435342890" duration="2927000" />
-      <workItem from="1633445127113" duration="607000" />
+      <workItem from="1633987530214" duration="10000" />
+      <workItem from="1633992022678" duration="82000" />
+      <workItem from="1665606615127" duration="597000" />
+      <workItem from="1665944409965" duration="842000" />
+      <workItem from="1666663371362" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="path function working, setting up rest of components, will hopefully neaten and comment code soon">
       <created>1625868988804</created>
@@ -336,28 +328,7 @@
       <option name="project" value="LOCAL" />
       <updated>1630515735112</updated>
     </task>
-    <task id="LOCAL-00010" summary="setup menu, starting a* for pathfinding">
-      <created>1632262338316</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1632262338316</updated>
-    </task>
-    <task id="LOCAL-00011" summary="set up menu, starting a* for pathfinding">
-      <created>1632324971416</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1632324971416</updated>
-    </task>
-    <task id="LOCAL-00012" summary="set up menu, starting a* for pathfinding">
-      <created>1632326396351</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1632326396351</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,7 +347,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -390,21 +360,12 @@
     <MESSAGE value="Added some images, gems and scoreboard and info bars" />
     <MESSAGE value="updating path setup" />
     <MESSAGE value="finishing grid setup" />
-    <MESSAGE value="setup menu, starting a* for pathfinding" />
-    <MESSAGE value="set up menu, starting a* for pathfinding" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up menu, starting a* for pathfinding" />
+    <option name="LAST_COMMIT_MESSAGE" value="finishing grid setup" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/game_sprites/enemies/enemy_def/enemy_def.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -416,18 +377,15 @@
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="current_level.game_grid" />
-        <watch expression="current_level.game_grid" />
+        <watch expression="BOMBEXPLODEEVENT" />
+        <watch expression="self" />
       </configuration>
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Digger_Game$activate_this.coverage" NAME="activate_this Coverage Results" MODIFIED="1629742283122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/Scripts" />
-    <SUITE FILE_PATH="coverage/Digger_Game$pycrunch_engine___auto.coverage" NAME="pycrunch-engine - auto Coverage Results" MODIFIED="1631017335476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1633438285465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Digger_Game$game.coverage" NAME="game Coverage Results" MODIFIED="1625883247014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="discordPresenceActive">
-    <option name="active" value="false" />
+    <SUITE FILE_PATH="coverage/Digger_Game$main.coverage" NAME="main Coverage Results" MODIFIED="1665945181040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="slackPresenceActive">
     <option name="active" value="false" />

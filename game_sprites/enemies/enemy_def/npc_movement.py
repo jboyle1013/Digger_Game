@@ -11,9 +11,17 @@ def ndig_movement(character, enemy, grid, level):
     y2 = character.rect.centery
     x1 = enemy.rect.centerx
     y1 = enemy.rect.centery
-    dir_options = [["STAY", [x1, y1]], ["RIGHT", [x1 + 6, y1]], ["LEFT", [x1 - 6, y1]], ["DOWN", [x1, y1 + 6]],
+    dir_options = [["RIGHT", [x1 + 6, y1]], ["LEFT", [x1 - 6, y1]], ["DOWN", [x1, y1 + 6]],
                    ["UP", [x1, y1 - 6]]]
-    jdir = [[x1, y1], [x1 + 6, y1], [x1 - 6, y1], [x1, y1 + 6], [x1, y1 - 6]]
+    jdir = []
+    for i in range(7):
+        jdir.append([x1 + i, y1 + i])
+        jdir.append([x1, y1 + i])
+        jdir.append([x1 + i, y1])
+        jdir.append([x1 - i, y1 - i])
+        jdir.append([x1, y1 - i])
+        jdir.append([x1 - i, y1])
+
     ydist = y2 - y1
     xdist = x2 - x1
     dist_liststol = []
@@ -22,7 +30,7 @@ def ndig_movement(character, enemy, grid, level):
     x_pos = 0
     y_pos = 0
     for dir in dir_options:
-        dist = m.dist( dir[1], character.rect.center )
+        dist = m.dist(dir[1], character.rect.center)
         dist_liststol.append( [dir[0], dist] )
     dist_liststol.sort()
     ind = []
@@ -64,7 +72,7 @@ def ndig_movement(character, enemy, grid, level):
     x = dir_options
     # pos_dir = dist_liststol[0][0]
 
-    return pos_dir
+    return pos_dir, path_collide_list
 
 
 def index_from_tuple_list(list, identifier):

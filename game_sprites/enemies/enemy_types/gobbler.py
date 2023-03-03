@@ -1,8 +1,6 @@
 from game_sprites.enemies.enemy_def.enemy_def import Enemy
-import pygame
-
-from game_sprites.enemies.enemy_def.enemy_def import Enemy
 from game_sprites.enemies.enemy_def.npc_movement import *
+from game_vals.game_vals import *
 
 
 class Gobbler( Enemy ):
@@ -11,8 +9,8 @@ class Gobbler( Enemy ):
         """ Constructor function """
         # Call the parent's constructor
         Enemy.__init__( self, path )
-        self.image = pygame.image.load( "game_sprites/enemies/enemy_types/gobbler.png" ).convert_alpha()
-        self.image = pygame.transform.smoothscale( self.image, (45, 45) )
+        self.image = pygame.image.load("game_sprites/enemies/enemy_types/gobbler.png").convert_alpha()
+        self.image = pygame.transform.smoothscale(self.image, (40, 40))
 
     def update(self):
         self.rect.x += self.change_x

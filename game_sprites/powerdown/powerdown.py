@@ -1,5 +1,4 @@
 import pygame
-from game_vals.game_vals import *
 
 
 class PowerDown(pygame.sprite.Sprite):

@@ -74,21 +74,21 @@ class Player( pygame.sprite.Sprite ):
     # Player-controlled movement:
     def go_left(self):
         """ Called when the user hits the left arrow. """
-        self.change_x = -6
+        self.change_x = -5
 
     def go_right(self):
         """ Called when the user hits the right arrow. """
-        self.change_x = 6
+        self.change_x = 5
 
     def go_up(self):
         """ Called when the user hits the up arrow. """
         if self.rect.bottom > 125:
-            self.change_y = -6
+            self.change_y = -5
 
     def go_down(self):
         """ Called when the user hits the down arrow. """
         if self.rect.bottom < 570:
-            self.change_y = 6
+            self.change_y = 5
 
     def stop(self):
         """ Called when the user lets off the keyboard. """

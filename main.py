@@ -144,14 +144,14 @@ def main():
                     player.stopy()
                     path_maker.stopy()
         # update screen
-        poss_dir = ndig_movement( player, current_level.gobbler1, current_level.game_grid, current_level )
-        current_level.gobbler1.moveinterpret( poss_dir )
+        poss_dir, coll_list = ndig_movement(player, current_level.gobbler1, current_level.game_grid, current_level)
+        current_level.gobbler1.moveinterpret(poss_dir, coll_list)
         # Update items in the level
 
         current_level.update()
         foreground, scoring, powerup, powerdown, bomb, screen, player, ground, path_maker, \
-        background, running, clock, timer, current_level, current_level_no, level_list, \
-        sprites, game_state = statechanger( game_state )
+            background, running, clock, timer, current_level, current_level_no, level_list, \
+            sprites, game_state = statechanger(game_state)
 
         # If the player gets to the end of the level, go to the next level
         # There is only one level that has been created.
