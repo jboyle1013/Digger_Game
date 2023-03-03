@@ -1,6 +1,6 @@
 from game_sprites.enemies.enemy_types.gobbler import Gobbler
 from game_sprites.gems.gem_def.gems_def import *
-
+from levels.definition.level_def import Level
 
 # Create platforms for the level
 class Level_0( Level ):

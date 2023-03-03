@@ -1,8 +1,4 @@
 import pygame
-from game_vals.game_vals import *
-import pygame
-
-from levels.definition.level_def import Level
 
 from game_vals.game_vals import *
 
